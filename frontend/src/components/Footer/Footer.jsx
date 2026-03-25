@@ -6,7 +6,7 @@ import {
   FiDollarSign, 
   FiGlobe 
 } from 'react-icons/fi';
-import './Footer.css';
+import './footer.css';
 import logoImg from "../../assets/logoImg.png";
 
 const Footer = () => {
