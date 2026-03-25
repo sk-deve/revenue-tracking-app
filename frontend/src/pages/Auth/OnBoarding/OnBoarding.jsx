@@ -19,7 +19,7 @@ import "./Onboarding.css";
 
 export default function Onboarding() {
   // ✅ axios setup in same file
-  const API_BASE = "http://localhost:4000";
+  const API_BASE = import.meta.env.VITE_API_URL;
   const ONBOARDING_STATUS_URL = `${API_BASE}/api/onboarding/status`;
   const ONBOARDING_COMPLETE_URL = `${API_BASE}/api/onboarding/complete`;
 
