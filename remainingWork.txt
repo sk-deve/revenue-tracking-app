@@ -1,0 +1,19 @@
+In this, i am going to mention the remaining points we need to work in last 10 days.
+
+
+
+1: Contact page for query.
+
+2: email verification process.
+
+3: Fixing the onboarding process, it's not redirecting to onboard after register.
+And fix the internal errors in onboarding process.
+
+4: Fix the reset password flow and invite member fow.
+
+5: Redesign some pages and areas, home page, register, login, reset password, etc.
+
+6: Make all the site responsive and all devices friendly.
+
+7: payment functionality and billing.
+

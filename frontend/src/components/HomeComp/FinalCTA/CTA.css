@@ -1,0 +1,309 @@
+/* =========================================================
+   Final CTA (Premium SaaS CTA)
+   Replace FULL CTA.css
+========================================================= */
+
+:root{
+  --lt-text: #0f172a;
+  --lt-muted: #94a3b8;
+
+  --lt-border: rgba(255,255,255,0.12);
+  --lt-border2: rgba(255,255,255,0.08);
+
+  --lt-blue: #3b82f6;
+  --lt-blue2: #2563eb;
+  --lt-red: #ef4444;
+
+  --lt-ring: rgba(59, 130, 246, 0.28);
+  --lt-shadow: 0 20px 60px rgba(2, 6, 23, 0.35);
+}
+
+/* section */
+.lt-cta-section{
+  padding: 74px 0 84px;
+  overflow-x: clip; /* prevents glow causing horizontal scroll */
+}
+
+/* wrapper */
+.lt-cta-wrapper{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 18px;
+  position: relative;
+}
+
+/* card */
+.lt-cta-content{
+  position: relative;
+  border-radius: 34px;
+  padding: 52px 52px;
+  overflow: hidden;
+  box-shadow: var(--lt-shadow);
+
+  /* deep premium background */
+  background:
+    radial-gradient(900px 400px at 80% 30%, rgba(59,130,246,0.18), transparent 60%),
+    radial-gradient(700px 380px at 20% 80%, rgba(37,99,235,0.16), transparent 55%),
+    linear-gradient(135deg, #0b1220, #0b1327 45%, #0a1120);
+  border: 1px solid rgba(255,255,255,0.08);
+
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 36px;
+  align-items: center;
+}
+
+/* top glow layer */
+.lt-cta-glow{
+  position: absolute;
+  left: 50%;
+  top: -160px;
+  transform: translateX(-50%);
+  width: min(1200px, 140vw);
+  height: 420px;
+  background:
+    radial-gradient(closest-side, rgba(59,130,246,0.25), transparent 70%),
+    radial-gradient(closest-side, rgba(34,197,94,0.10), transparent 70%);
+  filter: blur(16px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* subtle texture */
+.lt-cta-content::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background-image:
+    radial-gradient(rgba(255,255,255,0.04) 1px, transparent 1px);
+  background-size: 18px 18px;
+  opacity: 0.25;
+  pointer-events:none;
+}
+
+/* content stack */
+.lt-cta-left,
+.lt-cta-right{
+  position: relative;
+  z-index: 1;
+}
+
+.lt-cta-title{
+  margin: 0 0 14px;
+  font-size: clamp(38px, 4vw, 52px);
+  line-height: 1.04;
+  letter-spacing: -1px;
+  font-weight: 950;
+  color: #fff;
+}
+
+.text-highlight{
+  color: var(--lt-red);
+}
+
+/* description */
+.lt-cta-desc{
+  margin: 0 0 22px;
+  color: rgba(255,255,255,0.72);
+  font-size: 16px;
+  line-height: 1.65;
+  max-width: 520px;
+  font-weight: 560;
+}
+
+/* buttons */
+.lt-cta-buttons{
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.lt-btn-glow,
+.lt-btn-glass{
+  border: 0;
+  cursor: pointer;
+  border-radius: 16px;
+  padding: 14px 18px;
+  font-weight: 900;
+  font-size: 14px;
+  transition: transform 160ms ease, box-shadow 160ms ease, filter 160ms ease, border-color 160ms ease;
+}
+
+.lt-btn-glow{
+  min-width: 210px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: #fff;
+
+  background: linear-gradient(135deg, var(--lt-blue), var(--lt-blue2));
+  box-shadow:
+    0 18px 40px rgba(59,130,246,0.28),
+    inset 0 1px 0 rgba(255,255,255,0.16);
+}
+
+.lt-btn-glow:hover{
+  transform: translateY(-1px);
+  filter: brightness(1.03);
+  box-shadow:
+    0 22px 50px rgba(59,130,246,0.36),
+    inset 0 1px 0 rgba(255,255,255,0.18);
+}
+
+.lt-btn-glow:active{ transform: translateY(0); }
+
+.lt-btn-glass{
+  min-width: 260px;
+  color: rgba(255,255,255,0.92);
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.14);
+  box-shadow: 0 14px 26px rgba(0,0,0,0.22);
+}
+
+.lt-btn-glass:hover{
+  transform: translateY(-1px);
+  background: rgba(255,255,255,0.08);
+  border-color: rgba(255,255,255,0.18);
+}
+
+/* focus */
+.lt-btn-glow:focus-visible,
+.lt-btn-glass:focus-visible{
+  outline: none;
+  box-shadow: 0 0 0 4px var(--lt-ring), 0 18px 40px rgba(2,6,23,0.35);
+}
+
+/* tip box */
+.lt-cta-tip{
+  margin-top: 18px;
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+
+  padding: 14px 14px;
+  border-radius: 18px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.10);
+  max-width: 560px;
+}
+
+.tip-icon{
+  width: 40px;
+  height: 40px;
+  border-radius: 14px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(59,130,246,0.16);
+  border: 1px solid rgba(59,130,246,0.28);
+  color: rgba(255,255,255,0.92);
+  flex: 0 0 auto;
+}
+
+.lt-cta-tip p{
+  margin: 0;
+  color: rgba(255,255,255,0.78);
+  line-height: 1.55;
+  font-size: 13.5px;
+  font-weight: 560;
+}
+
+.lt-cta-tip strong{
+  color: rgba(255,255,255,0.95);
+  font-weight: 950;
+}
+
+/* =========================================================
+   Right Visual (clean + premium)
+========================================================= */
+.lt-cta-right{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.lt-3d-visual{
+  width: 360px;
+  height: 260px;
+  position: relative;
+  display: grid;
+  place-items: center;
+}
+
+.visual-circle{
+  position: absolute;
+  border-radius: 999px;
+  border: 1px solid rgba(59,130,246,0.18);
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.04);
+}
+
+.visual-circle.outer{
+  width: 240px;
+  height: 240px;
+  opacity: 0.55;
+}
+
+.visual-circle.inner{
+  width: 150px;
+  height: 150px;
+  opacity: 0.75;
+}
+
+.floating-icon{
+  width: 78px;
+  height: 78px;
+  border-radius: 22px;
+  display: grid;
+  place-items: center;
+
+  background: rgba(59,130,246,0.14);
+  border: 1px solid rgba(59,130,246,0.26);
+  box-shadow:
+    0 18px 40px rgba(2, 6, 23, 0.35),
+    inset 0 1px 0 rgba(255,255,255,0.10);
+
+  animation: floaty 4.5s ease-in-out infinite;
+}
+
+.floating-icon svg{
+  width: 34px;
+  height: 34px;
+  color: rgba(59,130,246,0.95);
+  filter: drop-shadow(0 8px 18px rgba(59,130,246,0.30));
+}
+
+@keyframes floaty{
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* =========================================================
+   Responsive
+========================================================= */
+@media (max-width: 980px){
+  .lt-cta-content{
+    grid-template-columns: 1fr;
+    padding: 38px 22px;
+    gap: 24px;
+  }
+
+  .lt-3d-visual{
+    width: 100%;
+    height: 220px;
+  }
+}
+
+@media (max-width: 560px){
+  .lt-cta-buttons > button{
+    width: 100%;
+    min-width: 0;
+  }
+
+  .lt-cta-title{
+    font-size: 34px;
+  }
+}
