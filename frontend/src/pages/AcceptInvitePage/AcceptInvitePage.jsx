@@ -5,7 +5,7 @@ import { FiCheckCircle, FiXCircle, FiLoader } from "react-icons/fi";
 import "./AcceptInvitePage.css";
 
 export default function AcceptInvitePage() {
-  const API_BASE = "http://localhost:4000";
+  const API_BASE = import.meta.env.VITE_API_URL;
   const ACCEPT_URL = `${API_BASE}/api/team/accept-invite`;
 
   const nav = useNavigate();

@@ -64,7 +64,7 @@ type UiIncident = {
  *  Config
  *  ========================= */
 
-const API_BASE = "http://localhost:4000"; // change if needed
+const API_BASE = import.meta.env.VITE_API_URL; // change if needed
 
 const uiReasonToApi = (r: UiReason): ApiReason => {
   // Map your UI reasons to backend enum reasons

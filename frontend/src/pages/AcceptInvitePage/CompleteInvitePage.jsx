@@ -5,7 +5,7 @@ import { FiLock, FiCheckCircle, FiXCircle, FiUser } from "react-icons/fi";
 import "./CompleteInvitePage.css";
 
 export default function CompleteInvitePage() {
-  const API_BASE = "http://localhost:4000";
+  const API_BASE = import.meta.env.VITE_API_URL;
   const COMPLETE_URL = `${API_BASE}/api/team/complete-invite`;
 
   const nav = useNavigate();

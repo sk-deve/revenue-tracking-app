@@ -119,7 +119,7 @@ export default function Insights() {
         setLoading(true);
         setError("");
 
-        const baseURL = "http://localhost:4000";
+        const baseURL = import.meta.env.VITE_API_URL;
         const token = localStorage.getItem("token"); // adjust if your app stores it differently
 
         const res = await axios.get<InsightsResponse>(`${baseURL}/api/insights/overview`, {
