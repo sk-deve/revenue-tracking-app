@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { FiArrowRight, FiCheck, FiUser, FiMail, FiLock, FiBriefcase } from "react-icons/fi";
-import "./register.css";
+// import "./register.css";
 import Header from "../../../components/Header/Header";
 import Footer from "../../../components/Footer/Footer";
 import logoImg from "../../../assets/logoImg.png"; // ✅ use same logo as header (adjust path if needed)
